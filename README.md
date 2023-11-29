@@ -32,11 +32,11 @@ describe("<ctf-name> <number>: <challenge-name>", ()=>{
   // pre-hack setup
   async function runEveryTime() {
     [owner, attacker] = await ethers.getSigners();
-    // console.log(owner, attacker);
 
     const Contract = await ethers.getContractFactory("<Contract-name>", owner);
     contract = await Contract.deploy();
     await contract.waitForDeployment();
+    // console.log(owner, attacker, contract);
 
     return { owner, attacker, contract };
   }
