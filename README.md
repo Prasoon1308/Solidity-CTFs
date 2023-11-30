@@ -25,6 +25,7 @@ const { loadFixture} = require("@nomicfoundation/hardhat-toolbox/network-helpers
 describe("<ctf-name> <number>: <challenge-name>", ()=>{
   // contract
   let contract;
+  let contractAddress;
   // accounts
   let owner;
   let attacker;
@@ -36,7 +37,9 @@ describe("<ctf-name> <number>: <challenge-name>", ()=>{
     const Contract = await ethers.getContractFactory("<Contract-name>", owner);
     contract = await Contract.deploy();
     await contract.waitForDeployment();
-    // console.log(owner, attacker, contract);
+
+    contractAddress = await contract.getAddress();
+    // console.log(owner.address, attacker.address, contractAddress);
 
     return { owner, attacker, contract };
   }
@@ -44,6 +47,7 @@ describe("<ctf-name> <number>: <challenge-name>", ()=>{
   // pawnage
   it("should hack the contract", async()=>{
     const {owner, attacker, contract} = await loadFixture(runEveryTime);
+    // console.log(owner.address, attacker.address, contractAddress);
   });
 
   // post-hack check
