@@ -13,7 +13,7 @@ npx hardhat run scripts/deploy.js
 ```
 
 ## Solving a CTF
-The [contracts](/Users/prasoonpatel/Desktop/Prasoon/Blockchain/CTFs/contracts) contains the challenge solidity files of which the vulnerabilites will be addressed in the [docs](/Users/prasoonpatel/Desktop/Prasoon/Blockchain/CTFs/docs). The [test](/Users/prasoonpatel/Desktop/Prasoon/Blockchain/CTFs/test) contains the attack on the targeted vulnerabilites.
+The [contracts](/contracts) contains the challenge solidity files of which the vulnerabilites will be addressed in the [docs](/docs). The [test](/test) contains the attack on the targeted vulnerabilites.
 
 Each test will be having same following format:
 
